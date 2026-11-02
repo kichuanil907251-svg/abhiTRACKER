@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek's (Jahnvi's bf) Weekly Tracker</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:18px;font-family:Arial,sans-serif;background:#0e1424;color:#eef2fa}
+.container{max-width:680px;margin:auto}
+h1{font-size:25px;margin-bottom:5px}
+.subtitle,.note{color:#9aa8c4}
+.day{background:#172033;border:1px solid #27344f;border-radius:12px;padding:15px;margin:14px 0}
+h2{margin:0 0 10px;font-size:19px;color:#8ab4ff}
+.section-title{margin:13px 0 6px;color:#c3cde0;font-size:14px;font-weight:bold}
+label{display:flex;align-items:flex-start;gap:10px;padding:7px 0;line-height:1.35}
+input[type=checkbox]{width:19px;height:19px;accent-color:#5b9bff;flex-shrink:0;margin-top:1px}
+.rest{color:#b8c3d9}
+.progress-wrap{background:#232e47;height:10px;border-radius:20px;overflow:hidden;margin:14px 0 6px}
+#progress{height:100%;width:0;background:#5b9bff;transition:width .2s}
+button{border:0;border-radius:8px;padding:11px 15px;background:#25314d;color:white;margin-top:10px;cursor:pointer}
+.exercise-list{margin-top:3px}
+</style>
+</head>
+<body>
+<main class="container">
+<h1>Abhishek's (Jahnvi's bf) Weekly Tracker</h1>
+<p class="subtitle">Study + morning run + evening workout</p>
+<strong id="progressText">0% completed</strong>
+<div class="progress-wrap"><div id="progress"></div></div>
+
+<section class="day">
+<h2>Tuesday</h2>
+<div class="section-title">Study</div>
+<label><input type="checkbox" data-task="tue-adc"> ADC — Revision</label>
+<label><input type="checkbox" data-task="tue-dsp"> DSP — First Module: 16 videos + previous QPs</label>
+<div class="section-title">Morning</div>
+<label><input type="checkbox" data-task="tue-run"> Long run</label>
+<div class="section-title">Evening — Triceps + Abs</div>
+<div class="exercise-list">
+<label><input type="checkbox" data-task="tue-diamond"> Diamond push-ups — 3 × 10</label>
+<label><input type="checkbox" data-task="tue-tri-ext"> Triceps extensions — 3 × 12</label>
+<label><input type="checkbox" data-task="tue-dips"> Bench dips — 3 × 12</label>
+<label><input type="checkbox" data-task="tue-rev-crunch"> Reverse crunches — 3 × 15</label>
+<label><input type="checkbox" data-task="tue-bicycle"> Bicycle crunches — 3 × 20</label>
+<label><input type="checkbox" data-task="tue-plank"> Plank — 2 × 45 sec</label>
+</div>
+<div class="section-title">Daily</div>
+<label><input type="checkbox" data-task="tue-water"> Water — 4 L</label>
+<label><input type="checkbox" data-task="tue-sleep"> Sleep — 7–8 hrs</label>
+</section>
+
+<section class="day">
+<h2>Wednesday</h2>
+<div class="section-title">Study</div>
+<label><input type="checkbox" data-task="wed-adc"> ADC — Second Module</label>
+<label><input type="checkbox" data-task="wed-lab"> Lab</label>
+<div class="section-title">Morning</div>
+<label><input type="checkbox" data-task="wed-run"> Sprint</label>
+<div class="section-title">Evening — Legs + Abs</div>
+<label><input type="checkbox" data-task="wed-squats"> Squats — 3 × 15</label>
+<label><input type="checkbox" data-task="wed-bulgarian"> Bulgarian split squats — 3 × 10 each leg</label>
+<label><input type="checkbox" data-task="wed-lunges"> Lunges — 3 × 12</label>
+<label><input type="checkbox" data-task="wed-calf"> Calf raises — 3 × 20</label>
+<label><input type="checkbox" data-task="wed-hanging"> Hanging knee raises — 3 × 12</label>
+<label><input type="checkbox" data-task="wed-plank"> Plank — 3 × 40 sec</label>
+<div class="section-title">Daily</div>
+<label><input type="checkbox" data-task="wed-water"> Water — 4 L</label>
+<label><input type="checkbox" data-task="wed-sleep"> Sleep — 7–8 hrs</label>
+</section>
+
+<section class="day">
+<h2>Thursday</h2>
+<div class="section-title">Study</div>
+<label><input type="checkbox" data-task="thu-cs"> Control Systems — First Module</label>
+<label><input type="checkbox" data-task="thu-lab"> Lab</label>
+<div class="section-title">Morning</div>
+<p class="rest">Running rest day</p>
+<div class="section-title">Evening — Biceps + Triceps</div>
+<label><input type="checkbox" data-task="thu-curls"> Dumbbell curls — 3 × 12</label>
+<label><input type="checkbox" data-task="thu-hammer"> Hammer curls — 3 × 12</label>
+<label><input type="checkbox" data-task="thu-close-grip"> Close-grip push-ups — 3 × 10</label>
+<label><input type="checkbox" data-task="thu-overhead"> Overhead triceps extensions — 3 × 12</label>
+<label><input type="checkbox" data-task="thu-reverse-curls"> Reverse curls — 2 × 12</label>
+<div class="section-title">Daily</div>
+<label><input type="checkbox" data-task="thu-water"> Water — 4 L</label>
+<label><input type="checkbox" data-task="thu-sleep"> Sleep — 7–8 hrs</label>
+</section>
+
+<section class="day">
+<h2>Friday</h2>
+<div class="section-title">Study</div>
+<label><input type="checkbox" data-task="fri-em"> EM — First Module</label>
+<label><input type="checkbox" data-task="fri-lab"> Lab</label>
+<div class="section-title">Morning</div>
+<label><input type="checkbox" data-task="fri-run"> Long run</label>
+<div class="section-title">Evening — Legs + Abs</div>
+<label><input type="checkbox" data-task="fri-goblet"> Goblet squats — 3 × 12</label>
+<label><input type="checkbox" data-task="fri-rdl"> Romanian deadlifts — 3 × 12</label>
+<label><input type="checkbox" data-task="fri-walking"> Walking lunges — 2 × 12 each leg</label>
+<label><input type="checkbox" data-task="fri-calf"> Calf raises — 3 × 20</label>
+<label><input type="checkbox" data-task="fri-reverse"> Reverse crunches — 3 × 15</label>
+<label><input type="checkbox" data-task="fri-side-plank"> Side plank — 2 × 30 sec each side</label>
+<div class="section-title">Daily</div>
+<label><input type="checkbox" data-task="fri-water"> Water — 4 L</label>
+<label><input type="checkbox" data-task="fri-sleep"> Sleep — 7–8 hrs</label>
+</section>
+
+<section class="day">
+<h2>Saturday</h2>
+<div class="section-title">Study</div>
+<label><input type="checkbox" data-task="sat-dsp"> DSP — Second Module</label>
+<label><input type="checkbox" data-task="sat-lab"> Lab</label>
+<div class="section-title">Morning</div>
+<label><input type="checkbox" data-task="sat-run"> Sprint</label>
+<div class="section-title">Evening — Light Core + Recovery</div>
+<label><input type="checkbox" data-task="sat-leg-raises"> Leg raises — 2 × 12</label>
+<label><input type="checkbox" data-task="sat-crunches"> Crunches — 2 × 20</label>
+<label><input type="checkbox" data-task="sat-plank"> Plank — 2 × 40 sec</label>
+<label><input type="checkbox" data-task="sat-stretch"> Full-body stretching — 10 min</label>
+<label><input type="checkbox" data-task="sat-arms"> Optional light arm exercises (only if fully recovered)</label>
+<div class="section-title">Daily</div>
+<label><input type="checkbox" data-task="sat-water"> Water — 4 L</label>
+<label><input type="checkbox" data-task="sat-sleep"> Sleep — 7–8 hrs</label>
+</section>
+
+<section class="day">
+<h2>Sunday</h2>
+<p class="rest">Leave / Rest day</p>
+<div class="section-title">Daily</div>
+<label><input type="checkbox" data-task="sun-water"> Water — 4 L</label>
+<label><input type="checkbox" data-task="sun-sleep"> Sleep — 7–8 hrs</label>
+</section>
+
+<button id="reset">Reset all checkmarks</button>
+</main>
+<script>
+const boxes=document.querySelectorAll('input[type="checkbox"]');
+boxes.forEach(box=>{
+  box.checked=localStorage.getItem(box.dataset.task)==='true';
+  box.addEventListener('change',()=>{
+    localStorage.setItem(box.dataset.task,box.checked);
+    updateProgress();
+  });
+});
+function updateProgress(){
+  const total=boxes.length;
+  const completed=[...boxes].filter(box=>box.checked).length;
+  const percent=total?Math.round(completed/total*100):0;
+  document.getElementById('progress').style.width=percent+'%';
+  document.getElementById('progressText').textContent=`${percent}% completed (${completed}/${total})`;
+}
+document.getElementById('reset').addEventListener('click',()=>{
+  if(!confirm('Clear all checkmarks for this tracker?'))return;
+  boxes.forEach(box=>{box.checked=false;localStorage.removeItem(box.dataset.task);});
+  updateProgress();
+});
+updateProgress();
+</script>
+</body>
+</html>
